@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS estufa;
+USE estufa;
+
+CREATE TABLE IF NOT EXISTS estufa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
+    variedade VARCHAR(150) NOT NULL,
+    responsavel DATE NOT NULL,
+    
+);
+
+
+
+

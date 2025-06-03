@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #f0f0f0;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-style: italic;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+nav a.ativo {
+  font-weight: bold;
+}
+
+.icone-usuario {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.banner img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+main {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.nova-estufa {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  width: 160px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #888;
+  font-weight: bold;
+}
+
+.nova-estufa .circulo {
+  width: 30px;
+  height: 30px;
+  background-color: #f3f3f3;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 22px;
+  border: 1px solid #ccc;
+}
+
+.conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.descricao {
+  width: 60%;
+}
+
+.descricao h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.descricao p {
+  font-size: 14px;
+  color: #555;
+  text-align: justify;
+}
+
+.clima {
+  text-align: center;
+  font-size: 14px;
+}
+
+.clima img {
+  width: 40px;
+  margin: 10px 0;
+}
