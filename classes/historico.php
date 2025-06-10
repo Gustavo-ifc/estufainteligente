@@ -1,5 +1,5 @@
 <?php
-class Estufa {
+class Historico {
     public $id;
     public $datahora;
     public $temp;

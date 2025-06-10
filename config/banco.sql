@@ -9,6 +9,14 @@ CREATE TABLE IF NOT EXISTS estufa (
     
 );
 
+CREATE TABLE IF NOT EXISTS historico (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    datahora VARCHAR(150) NOT NULL,
+    temperatura VARCHAR (150) NOT NULL,
+    umidade DATE NOT NULL,
+    nvagua VARCHAR(150) NOT NULL,
+)
+
 
 
 
