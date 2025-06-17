@@ -15,8 +15,14 @@ CREATE TABLE IF NOT EXISTS historico (
     temperatura VARCHAR (150) NOT NULL,
     umidade DATE NOT NULL,
     nvagua VARCHAR(150) NOT NULL,
-)
+);
 
+CREATE TABLE IF NOT EXISTS cadastro (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
+    numero VARCHAR (150) NOT NULL,
+    senha DATE NOT NULL,
+)
 
 
 

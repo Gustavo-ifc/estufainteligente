@@ -10,13 +10,13 @@
     <div class="logo">Estufa <strong>Inteligente</strong></div>
     <nav>
       <a href="#" class="ativo">Página Inicial</a>
-      <a href="#">Histórico</a>
+      <a href="paghistorico.php">Histórico</a>
       <div class="icone-usuario">👤</div>
     </nav>
   </header>
 
   <section class="banner">
-    <img src="https://cdn.pixabay.com/photo/2016/11/23/14/45/greenhouse-1853078_1280.jpg" alt="Estufa">
+    <img src="img/estufa.png" alt="Estufa">
   </section>
 
   <main>

@@ -77,6 +77,7 @@ main {
   background-color: #f3f3f3;
   border-radius: 50%;
   text-align: center;
+  text-size-adjust: center;
   line-height: 30px;
   font-size: 22px;
   border: 1px solid #ccc;
@@ -90,7 +91,7 @@ main {
 }
 
 .descricao {
-  width: 60%;
+  width: 40%;
 }
 
 .descricao h2 {
