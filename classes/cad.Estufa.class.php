@@ -10,7 +10,7 @@ class Estufa {
         $this->nome = $nome;
         $this->variedade = $variedade;
         $this->responsavel = $responsavel;
-        $this->hora = $hora;
+        
     }
 
     public static function buscarTodos($conn) {
