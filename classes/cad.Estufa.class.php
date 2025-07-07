@@ -79,7 +79,7 @@ class Estufa {
         return $this->variedade;
     }
     public function getResponsavel(): String{
-        return $this->resposanvel;
+        return $this->responsavel;
     }
 }
 ?>
