@@ -56,14 +56,14 @@ class Usuario {
 
     public function setNome($nome){
         if ($nome < 0)
-            throw new Exception("Erro, o varieda$nome deve ser maior que 0!");
+            throw new Exception("Erro, o nome deve ser maior que 0!");
         else
             $this->$nome = $nome;
     }
 
     public function setNumero($numero){
             if ($numero < 0)
-                throw new Exception("Erro, o nu$numero deve ser maior que 0!");
+                throw new Exception("Erro, o numero deve ser maior que 0!");
             else
                 $this->$numero = $numero;
     }
