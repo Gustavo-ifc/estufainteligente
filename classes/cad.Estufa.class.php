@@ -38,5 +38,48 @@ class Estufa {
         $stmt = $conn->prepare("DELETE FROM estufa WHERE id = ?");
         $stmt->execute([$id]);
     }
+
+    public function setId($id){
+        if ($id < 0)
+            throw new Exception("Erro, o ID deve ser maior que 0!");
+        else
+            $this->id = $id;
+    }
+
+    public function setIdNome($nome){
+        if ($nome < 0)
+            throw new Exception("Erro, o ID da Disciplina deve ser maior que 0!");
+        else
+            $this->nome = $nome;
+    }
+
+    public function setVariedade($variedade){
+        if ($variedade < 0)
+            throw new Exception("Erro, o varieda$variedade deve ser maior que 0!");
+        else
+            $this->$variedade = $variedade;
+    }
+
+    public function setResponsavel($responsavel){
+            if ($responsavel < 0)
+                throw new Exception("Erro, o responsavel deve ser maior que 0!");
+            else
+                $this->responsavel = $responsavel;
+    }
+
+    
+
+    public function getId(): int{
+        return $this->id;
+    }
+    public function getNome(): String{
+        return $this->nome;
+    }
+    public function getVariedade(): float{
+        return $this->variedade;
+    }
+    public function getResponsavel(): String{
+        return $this->resposanvel;
+    }
 }
 ?>
