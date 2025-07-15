@@ -5,23 +5,23 @@ CREATE TABLE IF NOT EXISTS estufa (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(150) NOT NULL,
     variedade VARCHAR(150) NOT NULL,
-    responsavel VARCHAR(150) NOT NULL,
+    responsavel DATE NOT NULL,
     
 );
 
 CREATE TABLE IF NOT EXISTS historico (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    datahora DATETIME NOT NULL,
-    temperatura DECIMAL(5,2) NOT NULL,
-    umidade DECIMAL(5,2) NOT NULL,
-    nvagua DECIMAL(5,2) NOT NULL,
+    datahora VARCHAR(150) NOT NULL,
+    temperatura VARCHAR (150) NOT NULL,
+    umidade DATE NOT NULL,
+    nvagua VARCHAR(150) NOT NULL,
 );
 
 CREATE TABLE IF NOT EXISTS cadastro (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(150) NOT NULL,
     numero VARCHAR (150) NOT NULL,
-    senha VARCHAR (150) NOT NULL,
+    senha DATE NOT NULL,
 )
 
 
