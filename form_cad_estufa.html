@@ -8,28 +8,28 @@
 <body>
   <div class="container">
     <a href="index.php" class="voltar">←</a>
-    
+
     <div class="formulario">
       <h2>CADASTRO DE ESTUFA</h2>
-      <form method="post">
+      <form method="post" action="processa_estufa.php">
         <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" required>
+        <input type="text" name="nome" required>
 
         <label for="variedade">Variedade</label>
-        <input type="text" id="variedade" name="variedade" required>
+        <input type="text" name="variedade" required>
 
         <label for="responsavel">Responsável</label>
-        <input type="text" id="responsavel" name="responsavel" required>
+        <input type="text" name="responsavel" required>
 
-        <label for="localizacao">Localização</label><br>
-         <label for="latitude">Latitude</label>
-         <input type="text" name="latitude" id="latitude">
-         <label for="longitude">longitude</label>
-         <input type="text" name="latitude" id="latitude">
+        <label for="latitude">Latitude</label>
+        <input type="text" name="latitude">
+
+        <label for="longitude">Longitude</label>
+        <input type="text" name="longitude">
+
         <button type="submit">Cadastrar</button>
       </form>
     </div>
   </div>
 </body>
 </html>
-
