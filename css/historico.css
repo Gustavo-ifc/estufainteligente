@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+  display: flex;
+  height: 100vh;
+}
+
+/* Lateral */
+.sidebar {
+  width: 250px;
+  background: #2f3542;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 1px solid #57606f;
+  padding-bottom: 10px;
+}
+
+.estufa-list button {
+  width: 100%;
+  background: #57606f;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.estufa-list button:hover,
+.estufa-list button.selected {
+  background: #1e90ff;
+}
+
+/* Conteúdo principal */
+.main {
+  flex-grow: 1;
+  padding: 30px;
+}
+
+.main h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #4CAF50;
+  color: white;
+}
+.btn-voltar {
+  text-decoration: none;
+  color: #1e90ff;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+.btn-voltar:hover {
+  background: rgba(30, 144, 255, 0.1);
+}

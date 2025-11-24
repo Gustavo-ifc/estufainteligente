@@ -16,7 +16,7 @@ $lista = $estufa->listar();
     <nav>
       <a href="#" class="ativo">Página Inicial</a>
       <a href="paghistorico.php">Histórico</a>
-      <div class="icone-usuario">👤</div>
+      <a href="perfil.php">👤</a>
     </nav>
   </header>
 
@@ -24,41 +24,34 @@ $lista = $estufa->listar();
     <img src="img/estufa.png" alt="Estufa">
   </section>
 
-  <!-- Estufas à esquerda e texto à direita -->
   <main>
     <div class="estufas-container">
-      
-      <!-- Lista de estufas (lado esquerdo, abaixo da imagem) -->
-      <section class="estufas-lista">
+      <div class="estufas-lista">
+        <!-- Botão fixo -->
         <a href="form_cad_estufa.html" class="nova-estufa">
           <div class="circulo">+</div>
           <span>Nova Estufa</span>
         </a>
-
+      <br>
+        <!-- Botões das estufas -->
         <?php foreach ($lista as $e): ?>
-          <a href="estufa.php?id=<?= $e['id'] ?>" class="nova-estufa">
+          <a href="estufas.php?estufa=<?= $e['id'] ?>" class="nova-estufa">
             <div class="circulo">🌿</div>
             <span><?= htmlspecialchars($e['nome']) ?></span>
           </a>
         <?php endforeach; ?>
-      </section>
+      </div>
 
-      <!-- Texto Bem-vindo (lado direito) -->
-      <section class="descricao">
-        <h2><strong>Bem-vindo à Estufa Inteligente</strong></h2>
-        <p>
-          A estufa inteligente é um sistema automatizado que controla fatores como temperatura, umidade, luminosidade e irrigação para criar o ambiente ideal ao cultivo de plantas. Utilizando sensores e um microcontrolador, ela toma decisões automaticamente e pode ser monitorada à distância. Essa tecnologia aumenta a produtividade, economiza recursos e facilita o cultivo, sendo ideal para pequenos produtores, hortas urbanas e projetos educacionais.
-        </p>
-      </section>
+      <!-- Descrição à direita -->
+      <div class="descricao">
+  <div class="card-descricao">
+    <h2>🌱 Bem-vindo à Estufa Inteligente</h2>
+    <p>
+      A estufa inteligente é um sistema automatizado que controla fatores como temperatura, umidade, luminosidade e irrigação para criar o ambiente ideal ao cultivo de plantas. Utilizando sensores e um microcontrolador, ela toma decisões automaticamente e pode ser monitorada à distância. Essa tecnologia aumenta a produtividade, economiza recursos e facilita o cultivo, sendo ideal para pequenos produtores, hortas urbanas e projetos educacionais.
+    </p>
+  </div>
+</div>
     </div>
-
-    <!-- Clima abaixo de tudo -->
-    <section class="clima">
-      <p><strong>Clima</strong></p>
-      <img src="https://cdn-icons-png.flaticon.com/512/414/414825.png" alt="Nublado" width="64">
-      <p>terça-feira, 15:00</p>
-      <p>Nublado</p>
-    </section>
   </main>
 </body>
 </html>

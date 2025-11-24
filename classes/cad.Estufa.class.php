@@ -1,32 +1,31 @@
 <?php
+require_once 'conexao.php';
+
 class Estufa {
-    private $pdo;
+    private $nome, $variedade, $responsavel, $latitude, $longitude;
 
-    public function __construct() {
-        try {
-            $this->pdo = new PDO("mysql:host=localhost;dbname=estufa;charset=utf8", "root", "");
-            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            die("Erro ao conectar ao banco de dados: " . $e->getMessage());
-        }
-    }
+    public function setNome($n)         { $this->nome = $n; }
+    public function setVariedade($v)    { $this->variedade = $v; }
+    public function setResponsavel($r)  { $this->responsavel = $r; }
+    public function setLatitude($lat)   { $this->latitude = $lat; }
+    public function setLongitude($long) { $this->longitude = $long; }
 
-    public function cadastrar($nome, $variedade, $responsavel, $latitude, $longitude) {
+    public function inserir() {
+        global $pdo;
         $sql = "INSERT INTO estufa (nome, variedade, responsavel, latitude, longitude)
                 VALUES (:nome, :variedade, :responsavel, :latitude, :longitude)";
-        $stmt = $this->pdo->prepare($sql);
+        $stmt = $pdo->prepare($sql);
         $stmt->execute([
-            ':nome' => $nome,
-            ':variedade' => $variedade,
-            ':responsavel' => $responsavel,
-            ':latitude' => $latitude,
-            ':longitude' => $longitude
+            ':nome' => $this->nome,
+            ':variedade' => $this->variedade,
+            ':responsavel' => $this->responsavel,
+            ':latitude' => $this->latitude,
+            ':longitude' => $this->longitude
         ]);
     }
 
     public function listar() {
-        $stmt = $this->pdo->query("SELECT * FROM estufa ORDER BY id DESC");
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        global $pdo;
+        return $pdo->query("SELECT * FROM estufa ORDER BY id DESC")->fetchAll(PDO::FETCH_ASSOC);
     }
 }
-?>
